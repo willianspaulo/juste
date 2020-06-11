@@ -7,12 +7,13 @@ A ideia é criar um aplicativo onde primeiramente seja simplificado para o uso e
 ## TypeScript + React + React Native
 
 ### SERVER
-#### - Foi criada uma API REST, que utiliza as ferramentas:
+#### -> Foi criada uma API REST, que utiliza as ferramentas:
 -- Node.js
 -- Express.js
 -- Knex.js (com Sqlite3)
 
 ### MOBILE
 
-### WEB - O prejeto web é um SPA (Single-page application) com:
+### WEB
+#### -> O prejeto web é um SPA (Single-page application) com:
 -- RectJS
