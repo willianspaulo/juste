@@ -1,4 +1,4 @@
-Initialize project run:
+Initialize and install dependecy project run:
 ## yarn
 
 Run migrations
