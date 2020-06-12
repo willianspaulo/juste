@@ -1,8 +1,7 @@
 import Knex from 'knex';
-import { table } from 'console';
 
 export async function up(knex: Knex) {
-    return knex.schema.createTable('product', table => {
+    return knex.schema.createTable('variationType', table => {
         table.increments('id').primary();
         table.string('description').notNullable();
         table.string('note').notNullable();
@@ -13,5 +12,5 @@ export async function up(knex: Knex) {
  };
 
 export async function down(knex: Knex) { 
-    return knex.schema.dropTable('product');
+    return knex.schema.dropTable('variationType');
 };
