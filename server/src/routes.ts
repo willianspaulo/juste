@@ -1,4 +1,5 @@
 import express from 'express';
+import knex from './database/connection';
 
 const routes = express.Router();
 
@@ -21,5 +22,11 @@ routes.post('/users', (request, response) => {
 
     return response.json(user);
 });
+   
+routes.get('/categories', async (request, response) => {
+    const categories = await knex('category').select('*');
 
-export default routes; 
+    return response.json(categories);
+});
+
+export default routes;

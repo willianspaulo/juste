@@ -1,5 +1,5 @@
 import path from 'path';
-import { seed } from './src/database/seeds/create_categories';
+
 module.exports = {
     client: 'mysql',
     connection: {
