@@ -1,32 +1,15 @@
 import express from 'express';
-import knex from './database/connection';
+import CategoryContoller from './controllers/CategoryController';
+import UserController from './controllers/UserController';
 
 const routes = express.Router();
+const userController = new UserController();
+const categoryContoller = new CategoryContoller();
 
-routes.get('/users', (request, response) => {
-    console.log('Listagem de usuários');
-    return response.json([
-        'Willians',
-        'Darlane',
-        'Bianca',
-        'Davi',
-        'Devanildo'
-    ]);
-});
-
-routes.post('/users', (request, response) => {
-    const user = {
-        nome: 'Willians P',
-        email: 'willians@gmail.com'
-    }
-
-    return response.json(user);
-});
    
-routes.get('/categories', async (request, response) => {
-    const categories = await knex('category').select('*');
+routes.get('/users', userController.index);
+routes.post('/users', userController.post);
 
-    return response.json(categories);
-});
+routes.get('/categories', categoryContoller.index);
 
 export default routes;
