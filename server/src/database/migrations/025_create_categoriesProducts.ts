@@ -6,6 +6,9 @@ export async function up(knex: Knex) {
         table.integer('idCategory').notNullable();//.references('id').inTable('category');
         table.dateTime('creationDate').notNullable();
         table.dateTime('updateDate').notNullable();
+
+        // table.foreign('idProduct').references('product.id');
+        // table.foreign('idCategory').references('category.id');
     })
  };
 

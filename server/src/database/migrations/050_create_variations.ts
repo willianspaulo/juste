@@ -5,17 +5,16 @@ export async function up(knex: Knex) {
         table.increments('id').primary(),
         table.integer('amount').notNullable(),
         table.decimal('price').notNullable(),
-        table.integer('idVariationType').notNullable(),
         table.string('valueVariation').notNullable(),
         table.string('batch').notNullable();
         table.string('batchObservation').notNullable();
         table.dateTime('manufacturingDate').notNullable();
         table.dateTime('expirationDate').notNullable();
-        table.integer('idProduct').notNullable();//.references('id').inTable('product');
-        table.integer('idVariation').notNullable();//.references('id').inTable('variationType');
+        // table.integer('idProduct').notNullable().references('id').inTable('product');
+        table.integer('idVariationType').notNullable(),
+        // table.integer('idVariation').notNullable().references('id').inTable('variationType');
         table.dateTime('creationDate').notNullable();
         table.dateTime('updateDate').notNullable();
-        
     })
  };
 
