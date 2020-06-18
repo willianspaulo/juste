@@ -13,7 +13,7 @@ A ideia é criar um aplicativo onde primeiramente seja simplificado para o uso e
 -- Knex.js (com Sqlite3)
 
 ### MOBILE
-
+#### -> Projeto mobile criado com o expo-cli
 ### WEB
 #### -> O prejeto web é um SPA (Single-page application) com:
 -- RectJS
